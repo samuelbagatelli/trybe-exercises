@@ -19,6 +19,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_HOST: db
+      MYSQL_DATABASE: orm_authenticator_db
       PORT: '3000'
       HOST: orm_authenticator
     networks:
@@ -28,7 +29,7 @@ services:
     container_name: orm_authenticator_db
     image: mysql:8.0.23
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - 4000:3306
     networks:
